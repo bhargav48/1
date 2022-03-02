@@ -1,8 +1,31 @@
 # 1
-l=[1,2,1,3,2,5,4,6,7,6,4]
-l1=[]
-for i in l1:
-    l1.append(i)
-    for j in l1:
-        if l.count(j)==1:
-            print(j)
+A=[]
+m=int(input('enter no.of rows:'))
+n=int(input('enter n0.of columns:'))
+for i in range(m):
+    row=[]
+    for j in range(n):
+        k=int(input())
+        row.append(k)
+        A.append(row)
+    print(A)
+B=[]
+m=int(input('enter no.of rows'))
+n=int(input('enter no.of columns:'))
+for i in range(m):
+    row=[]
+    for j in range(n):
+        k=int(input())
+        row.append(k)
+        B.append(row)
+        print(B)
+result=[[0,0],[0,0]]
+for i in range(m):
+    for j in range(n):
+        for k in range(n):
+             result[i][j]+=A[i][j]*B[i][j]
+        print('resultant matrix is:')
+        for i in range(m):
+            for j in range(n):
+                print(result[i][j],end='')
+                print()
